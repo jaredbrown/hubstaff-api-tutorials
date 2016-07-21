@@ -35,7 +35,7 @@ in the future. So, I'd recommend opening up your `.gitignore` file and include
 `.env.local`.
 
 You can then create this file in your root directory and place in the following
-code, swapping in your specific App Token:
+code, swapping in your specific `App-Token`:
 
 ```ruby
 APP_TOKEN=“<App Token Hubstaff Provided>”
@@ -52,6 +52,8 @@ Dotenv.load(".env.local")
 # Initialize the Rails application.
 Rails.application.initialize!
 ```
+## Connecting Your Users To Their Hubstaff Account
+
 Now that you have your hubstaff gem setup you can begin incorporating it into your
 User class. Let’s open up your `user.rb` file and include the following lines:
 
@@ -290,6 +292,9 @@ Bootstrap modals. Here is what the revised show file will look like
   </div>
 <% end %>
 ```
+
+## Retrieving Custom Reports From Hubstaff
+
 Finally you have to write the methods to retrieve the custom report data and screenshots. Let’s begin with the `#get_custom_report` method.
 
 ```ruby
@@ -343,6 +348,8 @@ code in it
 Awesome, now you can retrieve a custom team report from your Hubstaff account!
 
 ![Custom Report](/images/custom_report.png)
+
+## Retrieving Screenshots From Hubstaff
 
 Next let's create a method to retrieve screenshots. Back in your
 `users_controller.rb` file add the following method:
