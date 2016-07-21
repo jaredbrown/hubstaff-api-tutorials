@@ -68,7 +68,7 @@ auth_token=“<Generated authentication token>”
 
 Once that's done, you can request account related data like reports, users, organizations, notes and others from hubstaff.
 
-### Retrieving Team Reports From Hubstaff
+## Retrieving Team Reports From Hubstaff
 
 Now let's start with fetching the team reports in a specific period of time. You can find the following code snipets in `/reports.` file.
 
@@ -186,7 +186,7 @@ And you'll have something that looks like this:
 
 ![Hubstaff Report](/images/php_report.png)
 
-### Retrieving Screenshots From Hubstaff
+## Retrieving Screenshots From Hubstaff
 
 The steps required to retrieve screenshots is similar to team reports. If you look inside the `pages/screenshots.php` file, you can change the parameters for the `screenshots` function to:
 
