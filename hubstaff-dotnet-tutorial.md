@@ -28,10 +28,11 @@ After editing your config.cs file you'll be initializing hubstaff api into your 
 
  aspnetcoreapp.hubstaff_api hubstaff_api = new aspnetcoreapp.hubstaff_api();
 ```
+## Connecting Your Users To Their Hubstaff Account
 
 Next, you'll generate your `App-Token` using your hubstaff account email address and password.
 
-If you take a look into Views/dashboard/index.cshtml file you can see the connection form:
+If you take a look into `Views/dashboard/index.cshtml` file you can see the connection form:
 
 ```html
 <!-- Views/Dashboard/index.cshtml  -->
@@ -64,6 +65,8 @@ public string auth_token = “<Generated authentication token>”;
 ```
 
 Once you get all that done you can start requesting account related data like reports, users, organizations, notes and others from hubstaff.
+
+## Retrieving Team Reports From Hubstaff
 
 Now let's start with fetching the team reports in a specific period of time.
 
@@ -166,7 +169,10 @@ And you're going to have something that looks like this
 
 ![asp_report](/images/asp_report.png)
 
-And the same goes for screenshots functions, by changing the parameters to
+## Retrieving Screenshots From Hubstaff
+
+And the same goes for `screenshots` functions, by changing the parameters to:
+
 ```cs
 /* Controllers/Screenshots.cs */
 
