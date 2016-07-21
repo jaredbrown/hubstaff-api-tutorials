@@ -27,6 +27,7 @@ After editing your `config.php` file, you'll initialize the hubstaff api client 
 include("hubstaff/hubstaff.php");
 $hubstaff = new hubstaff();
 ```
+## Connecting Your Users To Their Hubstaff Account
 
 Next, you'll generate your `App-Token` using your hubstaff account email address and password. If you take a look into `pages/dashboard.php` file you can see the connection form.
 
@@ -68,7 +69,7 @@ auth_token=“<Generated authentication token>”
 
 Once that's done, you can request account related data like reports, users, organizations, notes and others from hubstaff.
 
-## Retrieving Team Reports From Hubstaff
+## Fetching Team Reports From Hubstaff
 
 Now let's start with fetching the team reports in a specific period of time. You can find the following code snipets in `/reports.` file.
 
@@ -143,7 +144,7 @@ foreach($params as $index => $param)
 Then you'll request the report by calling `custom_date_team` function:
 
 ```php
-/* pages/screenshots.php */
+/* pages/reports.php */
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
@@ -160,7 +161,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 Now let's display the output onto your screen by iterating over the retured json string:
 
 ```php
-/* pages/screenshots.php */
+/* pages/reports.php */
 
 foreach($report->organizations as $org)
 {
@@ -186,7 +187,7 @@ And you'll have something that looks like this:
 
 ![Hubstaff Report](/images/php_report.png)
 
-## Retrieving Screenshots From Hubstaff
+## Fetching Screenshots From Hubstaff
 
 The steps required to retrieve screenshots is similar to team reports. If you look inside the `pages/screenshots.php` file, you can change the parameters for the `screenshots` function to:
 
